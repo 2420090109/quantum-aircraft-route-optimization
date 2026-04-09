@@ -1,0 +1,110 @@
+Quantum Optimization for Aircraft Route Planning & Fuel Efficiency
+Submitted By:
+1. SYED MUSAIB(2420090109)
+2. SHAGA YASHWANTH(2420030624)
+3. SALADI AKSHAY VEER(2420030579)
+Section:-S11
+
+Instructor: GADDAM RAVINDRA BABU
+Institution: KL University, Bachupally, Hyderabad
+Proposed Model / Methodology
+Proposed Quantum Model:
+In this project, we developed a quantum optimization model for aircraft route selection using the Quantum Approximate Optimization Algorithm (QAOA). The problem is formulated as a combinatorial optimization task, where each possible route is represented as a binary decision variable.
+Each qubit corresponds to a route:
+•	Qubit 0 → Route A 
+•	Qubit 1 → Route B 
+•	Qubit 2 → Route C 
+The objective is to minimize the total fuel cost while avoiding congestion by selecting optimal routes.
+The cost function includes:
+•	Individual route fuel costs 
+•	Penalty for selecting multiple routes (to simulate congestion constraints) 
+•	Penalty for selecting no route (invalid case) 
+This formulation is implemented using a cost Hamiltonian, which is optimized using QAOA parameters (γ, β).
+________________________________________
+Algorithm Used
+•	Quantum Approximate Optimization Algorithm (QAOA):
+•	QAOA is a hybrid quantum-classical algorithm used for solving optimization problems.
+•	Steps involved:
+•	Initialize all qubits in superposition using Hadamard gates 
+•	Apply cost Hamiltonian (encodes fuel cost and penalties) 
+•	Apply mixing Hamiltonian (explores solution space) 
+•	Measure output states 
+•	Use classical optimizer (COBYLA) to update parameters 
+•	Repeat until convergence 
+•	This approach allows efficient exploration of multiple route combinations simultaneously.
+ Description of the Proposed System
+•	The proposed system is a Quantum-Based Route Optimization Model designed to identify the most fuel-efficient aircraft route using quantum computing techniques. The model leverages the Quantum Approximate Optimization Algorithm (QAOA) to solve a combinatorial optimization problem involving multiple route choices.
+•	In this system, each possible flight route is represented as a quantum state using qubits. The algorithm evaluates all possible route combinations simultaneously through quantum superposition. A cost function is defined to represent real-world constraints such as fuel consumption and air traffic congestion.
+•	The system incorporates:
+•	Fuel cost parameters for each route 
+•	Penalty factors to avoid selecting multiple routes (congestion simulation) 
+•	Penalty for invalid cases (no route selection) 
+•	The QAOA algorithm encodes these constraints into a cost Hamiltonian and iteratively optimizes the parameters using a classical optimizer. The output is a probability distribution over all possible routes, from which the most optimal route is selected based on the highest probability.
+•	The model is implemented using Qiskit and simulated on a classical backend, demonstrating how near-term quantum algorithms can be applied to real-world optimization problems.
+Working of the System
+•	User inputs route costs and congestion penalty 
+•	Quantum circuit is initialized with superposition 
+•	Cost Hamiltonian encodes optimization problem 
+•	Mixing Hamiltonian explores solution space 
+•	Circuit is executed and measured 
+•	Classical optimizer updates parameters 
+•	Final probability distribution is generated 
+•	Route with highest probability is selected as optimal
+Input Parameters
+The model takes the following inputs:
+Parameter	Description
+Cost A	Fuel cost for Route A
+Cost B	Fuel cost for Route B
+Cost C	Fuel cost for Route C
+Penalty	Congestion penalty for selecting multiple routes
+________________________________________
+Sample Test Cases & Results
+Test Case 1
+Input:
+Cost A = 8  
+Cost B = 7  
+Cost C = 1  
+Penalty = 10  
+ 
+Output:
+FINAL OPTIMIZED ROUTE SELECTED: Route C
+________________________________________
+Test Case 2
+Input:
+Cost A = 5  
+Cost B = 4  
+Cost C = 3  
+Penalty = 1  
+ 
+Output:
+Route B + Route C (or mixed probability results)
+________________________________________
+Test Case 3
+Input:
+Cost A = 6  
+Cost B = 5  
+Cost C = 2  
+Penalty = 50  
+ 
+Output:
+FINAL OPTIMIZED ROUTE SELECTED: Route C
+________________________________________
+Result Analysis
+•	The quantum model outputs a probability distribution over all possible route combinations.
+•	The route with the highest probability is selected as the optimal route 
+•	Higher penalty values enforce single-route selection 
+•	Lower penalty values allow multi-route combinations 
+•	The results demonstrate that:
+•	The algorithm successfully converges to the lowest-cost route 
+•	Quantum superposition enables exploration of multiple possibilities simultaneously 
+•	The model effectively balances cost and operational constraints 
+________________________________________
+ 
+Visualization
+•	The results are visualized using:
+•	Bar Graph – shows probability distribution of routes 
+•	Pie Chart – highlights top optimized routes
+
+Conclusion 
+This project demonstrates the practical application of quantum optimization techniques in solving aircraft route planning problems. By leveraging QAOA, the model efficiently identifies fuel-optimal routes while considering congestion constraints. The results highlight the potential of quantum computing in transforming complex decision-making processes in aviation and logistics industries.
+
