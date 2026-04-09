@@ -1,21 +1,40 @@
-# ✈️ Quantum Optimization for Aircraft Route Planning & Fuel Efficiency
+# ✈️ Quantum Aircraft Route Optimization
+
+![Quantum](https://img.shields.io/badge/Quantum-Computing-blue)
+![Qiskit](https://img.shields.io/badge/Qiskit-Framework-purple)
+![Python](https://img.shields.io/badge/Python-3.x-green)
+![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
+
+---
+
+## 🚀 Project Description
+Quantum-powered optimization of aircraft routes using QAOA to enhance fuel efficiency and aviation performance.
+
+---
 
 ## 📌 Overview
-This project explores the application of quantum computing techniques to optimize aircraft route planning and improve fuel efficiency.
+This project explores how quantum computing can solve complex optimization problems in aviation, specifically route planning and fuel efficiency.
 
-We use hybrid quantum-classical algorithms such as QAOA to solve optimization problems related to aviation logistics.
-
----
-
-## 🚀 Objectives
-- Minimize fuel consumption
-- Optimize flight routes
-- Reduce operational costs
-- Explore quantum advantage over classical methods
+We implement hybrid quantum-classical approaches using QAOA and QUBO models.
 
 ---
 
-## 🧠 Technologies Used
+## 🎯 Objectives
+- Minimize fuel consumption ✈️
+- Optimize flight paths 📍
+- Reduce operational costs 💰
+- Explore quantum advantage ⚛️
+
+---
+
+## ⚛️ Quantum Approach
+- QUBO (Quadratic Unconstrained Binary Optimization)
+- QAOA (Quantum Approximate Optimization Algorithm)
+- Hybrid Quantum-Classical Optimization
+
+---
+
+## 🧠 Tech Stack
 - Python
 - Qiskit
 - NumPy
@@ -23,25 +42,4 @@ We use hybrid quantum-classical algorithms such as QAOA to solve optimization pr
 
 ---
 
-## ⚛️ Quantum Approach
-We model the problem using:
-- QUBO (Quadratic Unconstrained Binary Optimization)
-- QAOA (Quantum Approximate Optimization Algorithm)
-
----
-
-## 📊 Project Structure
-- `src/` → core implementation
-- `notebooks/` → simulation & experiments
-- `docs/` → research papers & case study
-- `results/` → outputs & graphs
-
----
-
-## 🧪 How to Run
-
-```bash
-git clone https://github.com/your-username/quantum-aircraft-route-optimization.git
-cd quantum-aircraft-route-optimization
-pip install -r requirements.txt
-python src/main.py
+## 📁 Project Structure
